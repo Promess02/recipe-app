@@ -1,19 +1,8 @@
 import React, { useState, useEffect } from 'react';
-
-interface Recipe {
-    recipe_id: number;
-    recipe_name: string;
-    ingredients: string;
-    instructions: string;
-    prepare_time: number;
-    dish_category_id: number;
-    diet_category_id: number;
-    calories: number;
-    image_path: string;
-    num_of_portions: number;
-    update_date: string;
-    author_id: number;
-}
+import Category from './DTO/Category.tsx';
+import FavoriteRecipe from './DTO/FavoriteRecipe.tsx';
+import LoginHistory from './DTO/LoginHistory.tsx';
+import Recipe from './DTO/Recipe.tsx';
 
 const Recipes = () => {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
